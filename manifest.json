@@ -37,7 +37,7 @@
 			"name": "Umów wizytę",
 			"short_name": "Wizyta",
 			"description": "Szybkie umówienie wizyty",
-			"url": "/index.html",
+			"url": "/VizMas/index.html",
 			"icons": [
 				{
 					"src": "APPnG1000018783.png",
@@ -49,7 +49,7 @@
 			"name": "Kontakt",
 			"short_name": "Telefon",
 			"description": "Zadzwoń do masażysty",
-			"url": "/kontakt.html",
+			"url": "/VizMas/kontakt.html",
 			"icons": [
 				{
 					"src": "APPnG1000018783.png",
