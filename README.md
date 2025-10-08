@@ -1,1 +1,1 @@
-https://romahalaichuk.github.io/Taste/
+https://romahalaichuk.github.io/VizMas/
