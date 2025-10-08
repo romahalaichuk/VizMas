@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Masażysta - Wizytówka 3D</title>
+		<meta
+			name="description"
+			content="Profesjonalne usługi masażu terapeutycznego. Umów wizytę już dziś!" />
+
+		<!-- PWA Meta Tags -->
+		<meta name="theme-color" content="#D4AF37" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta name="apple-mobile-web-app-title" content="Masażysta" />
+		<link rel="stylesheet" href="index.css" />
+		<!-- PWA Manifest -->
+		<link rel="manifest" href="manifest.json" />
+
+		<!-- Icons -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="APPnG1000018783.png" />
+		<link rel="apple-touch-icon" href="APPnG1000018783.png" />
+
+		<!-- External Libraries -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+		<script src="https://unpkg.com/splitting@1.0.6/dist/splitting.js"></script>
+		<link
+			href="https://unpkg.com/splitting@1.0.6/dist/splitting.css"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<!-- Background Animation -->
+		<div class="background-animation" id="background-animation"></div>
+
+		<!-- Header -->
+		<header class="header fade-in-up">
+			<h1>Wizytówka Masażysty</h1>
+			<p>Profesjonalne usługi masażu terapeutycznego</p>
+		</header>
+
+		<main class="main-container">
+			<div class="card-container floating" id="card-container">
+				<div class="card-face card-front">
+					<img src="SRpNg5b777339.png" alt="Masażysta" class="profile-image" />
+					<h2 class="card-title">Jan Kowalski</h2>
+					<p class="card-subtitle">Masażysta</p>
+
+					<div class="rating">
+						<span class="star">★</span>
+						<span class="star">★</span>
+						<span class="star">★</span>
+						<span class="star">★</span>
+						<span class="star">★</span>
+						<span class="rating-text">(4.9/5 - 127 opinii)</span>
+					</div>
+
+					<p class="card-description">
+						Specjalizuję się w masażach leczniczych, relaksacyjnych i
+						sportowych. Z pasją pomagam moim klientom odzyskać zdrowie i dobre
+						samopoczucie.
+					</p>
+
+					<div class="action-buttons">
+						<button
+							class="btn btn-primary"
+							onclick="window.location.href='https://romahalaichuk.github.io/VizMas/'">
+							Umów wizytę
+						</button>
+					</div>
+				</div>
+
+				<!-- Back of Card -->
+				<div class="card-face card-back">
+					<div class="contact-info">
+						<h3
+							class="card-title"
+							style="font-size: 1.4rem; margin-bottom: 1rem">
+							Kontakt
+						</h3>
+
+						<div class="contact-item">
+							<span class="contact-icon">📱</span>
+							<span>+48 123 456 789</span>
+						</div>
+
+						<div class="contact-item">
+							<span class="contact-icon">📧</span>
+							<span>vi2virbien@gmail.com</span>
+						</div>
+
+						<div class="contact-item">
+							<span class="contact-icon">📍</span>
+							<span> Warszawa</span>
+						</div>
+
+						<div class="contact-item">
+							<span class="contact-icon">🕒</span>
+							<span>Pon-Sob</span>
+						</div>
+					</div>
+
+					<div class="services-list">
+						<h4 style="color: #8b4513; margin-bottom: 0.8rem; font-size: 1rem">
+							Usługi i ceny
+						</h4>
+
+						<div class="service-item">
+							<span class="service-name">Masaż klasyczny (60min)</span>
+							<span class="service-price">120 zł</span>
+						</div>
+
+						<div class="service-item">
+							<span class="service-name">Masaż relaksacyjny (90min)</span>
+							<span class="service-price">180 zł</span>
+						</div>
+
+						<div class="service-item">
+							<span class="service-name">Masaż sportowy (45min)</span>
+							<span class="service-price">100 zł</span>
+						</div>
+					</div>
+
+					<div class="action-buttons">
+						<button class="btn btn-primary" onclick="callPhone()">
+							Zadzwoń teraz
+						</button>
+						<button class="btn btn-secondary" onclick="sendEmail()">
+							Napisz email
+						</button>
+					</div>
+				</div>
+
+				<!-- Navigation Arrows -->
+				<button
+					class="nav-arrow left"
+					onclick="flipCard()"
+					title="Obróć wizytówkę">
+					←
+				</button>
+				<button
+					class="nav-arrow right"
+					onclick="flipCard()"
+					title="Obróć wizytówkę">
+					→
+				</button>
+			</div>
+		</main>
+
+		<!-- Download Section -->
+		<section class="download-section fade-in-up">
+			<button class="download-btn" onclick="downloadApp()">
+				📱 Pobierz wizytówkę na telefon
+			</button>
+			<p class="download-text">
+				Dodaj do ekranu głównego i miej zawsze przy sobie!
+			</p>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<p>© 2024 Masażysta Terapeutyczny. Wszystkie prawa zastrzeżone.</p>
+			<p>Profesjonalne usługi masażu w Warszawie</p>
+		</footer>
+
+		<script src="main.js"></script>
+	</body>
+</html>

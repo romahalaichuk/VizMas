@@ -1,0 +1,63 @@
+{
+	"name": "Masażysta - Wizytówka 3D",
+	"short_name": "Masażysta",
+	"description": "Profesjonalne usługi masażu terapeutycznego. Umów wizytę już dziś!",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#F5F5DC",
+	"theme_color": "#D4AF37",
+	"orientation": "portrait",
+	"scope": "/",
+	"lang": "pl",
+	"categories": ["business", "health", "lifestyle"],
+	"icons": [
+		{
+			"src": "APPnG1000018783.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "APPnG1000018783.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "SRpNg5b777339.png",
+			"sizes": "1024x1024",
+			"type": "image/png",
+			"form_factor": "narrow"
+		}
+	],
+	"shortcuts": [
+		{
+			"name": "Umów wizytę",
+			"short_name": "Wizyta",
+			"description": "Szybkie umówienie wizyty",
+			"url": "/",
+			"icons": [
+				{
+					"src": "APPnG1000018783.png",
+					"sizes": "192x192"
+				}
+			]
+		},
+		{
+			"name": "Zadzwoń",
+			"short_name": "Telefon",
+			"description": "Zadzwoń do masażysty",
+			"url": "tel:+48123456789",
+			"icons": [
+				{
+					"src": "APPnG1000018783.png",
+					"sizes": "192x192"
+				}
+			]
+		}
+	],
+	"related_applications": [],
+	"prefer_related_applications": false
+}
