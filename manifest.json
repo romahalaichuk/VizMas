@@ -2,7 +2,7 @@
 	"name": "Masażysta - Wizytówka 3D",
 	"short_name": "Masażysta",
 	"description": "Profesjonalne usługi masażu terapeutycznego. Umów wizytę już dziś!",
-	"start_url": "/",
+	"start_url": "/index.html",
 	"display": "standalone",
 	"background_color": "#F5F5DC",
 	"theme_color": "#D4AF37",
@@ -37,7 +37,7 @@
 			"name": "Umów wizytę",
 			"short_name": "Wizyta",
 			"description": "Szybkie umówienie wizyty",
-			"url": "/",
+			"url": "/index.html",
 			"icons": [
 				{
 					"src": "APPnG1000018783.png",
@@ -46,10 +46,10 @@
 			]
 		},
 		{
-			"name": "Zadzwoń",
+			"name": "Kontakt",
 			"short_name": "Telefon",
 			"description": "Zadzwoń do masażysty",
-			"url": "tel:+48123456789",
+			"url": "/kontakt.html",
 			"icons": [
 				{
 					"src": "APPnG1000018783.png",
