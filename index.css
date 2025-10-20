@@ -11,6 +11,49 @@ body {
 	overflow-x: hidden;
 	color: #2c2c2c;
 }
+/*style nowe */
+.popup-card {
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #fffbe6;
+	border-radius: 16px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+	padding: 1.5rem;
+	width: 90%;
+	max-width: 320px;
+	z-index: 9999;
+	text-align: center;
+	animation: fadeIn 0.5s ease-out;
+}
+.popup-photo {
+	width: 80px;
+	border-radius: 50%;
+	margin-bottom: 1rem;
+}
+.popup-buttons button {
+	margin: 0.5rem;
+	padding: 0.6rem 1.2rem;
+	border: none;
+	border-radius: 8px;
+	background-color: #d4af37;
+	color: white;
+	font-weight: bold;
+}
+.hidden {
+	display: none;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
 /* Background Animation */
 .background-animation {

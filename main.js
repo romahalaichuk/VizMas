@@ -1,4 +1,9 @@
+//chyba nowe
+window.addEventListener("load", () => {
+	document.getElementById("popup-card").classList.remove("hidden");
+}); // chyba nowe
 // 3D Business Card Interactive Logic
+
 class BusinessCard3D {
 	constructor() {
 		this.isFlipped = false;
