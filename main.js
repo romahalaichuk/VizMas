@@ -251,11 +251,9 @@ class BusinessCard3D {
 		let deferredPrompt;
 
 		window.addEventListener("beforeinstallprompt", (e) => {
-			e.preventDefault();
+			e.preventDefault(); // zapobiega automatycznemu pokazaniu
 			deferredPrompt = e;
-
-			// Show install button if desired
-			this.showInstallPromotion();
+			console.log("App is installable");
 		});
 	}
 
@@ -276,29 +274,20 @@ function sendEmail() {
 
 // Download app function
 function downloadApp() {
-	// Check if device is iOS
-	const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
-	if (isIOS) {
-		// Show iOS installation instructions
-		showiOSInstallInstructions();
+	if (deferredPrompt) {
+		deferredPrompt.prompt(); // pokazuje systemowy baner
+		deferredPrompt.userChoice.then((choiceResult) => {
+			if (choiceResult.outcome === "accepted") {
+				console.log("Użytkownik zainstalował aplikację");
+			} else {
+				console.log("Użytkownik anulował instalację");
+			}
+			deferredPrompt = null;
+		});
 	} else {
-		// Try to trigger PWA installation
-		if (window.deferredPrompt) {
-			window.deferredPrompt.prompt();
-			window.deferredPrompt.userChoice.then((choiceResult) => {
-				if (choiceResult.outcome === "accepted") {
-					console.log("User accepted the install prompt");
-				}
-				window.deferredPrompt = null;
-			});
-		} else {
-			// Fallback - show instructions
-			showInstallInstructions();
-		}
+		alert("Aplikacja już zainstalowana lub nie jest dostępna do instalacji.");
 	}
 }
-
 function showiOSInstallInstructions() {
 	const modal = createModal(`
         <h3>📱 Dodaj do ekranu głównego</h3>
