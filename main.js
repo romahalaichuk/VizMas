@@ -3,6 +3,13 @@ window.addEventListener("load", () => {
 	document.getElementById("popup-card").classList.remove("hidden");
 }); // chyba nowe
 // 3D Business Card Interactive Logic
+//nowe stare
+function callPhone() {
+	window.location.href = "tel:+48123456789";
+}
+function sendEmail() {
+	window.location.href = "mailto:vi2virbien@gmail.com";
+}
 
 class BusinessCard3D {
 	constructor() {
